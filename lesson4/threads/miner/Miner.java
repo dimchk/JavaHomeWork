@@ -17,10 +17,7 @@ public class Miner extends Thread {
     @Override
     public void run() {
         try {
-
-                mine();
-
-
+            mine();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
