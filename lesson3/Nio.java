@@ -16,12 +16,14 @@ public class Nio {
                 Path filePath = Paths.get("file-" + i + ".txt");
                 FileOutputStream outputStream = new FileOutputStream(dirPath.toString() + "/" + filePath.toString());
                 files[i] = dirPath.toString() + "/" + filePath.toString();
+
                 outputStream.write(("File number" + i).getBytes());
             }
             for (int i = 0; i < files.length; i++) {
                 if (i % 2 == 0) {
                     Path filePath = Paths.get(files[i]);
                     Files.delete(filePath);
+
                 }
             }
         } catch (IOException e) {
